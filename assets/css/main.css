@@ -1,0 +1,244 @@
+/*fonts used in the site*/
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Material Icons"), url("/eLibrary/assets/vendors/angular/fonts/MaterialIcons-Regular.woff") format("woff"); }
+
+/*
+Site-wise default font, color, background and common classes
+*/
+body {
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  outline: none !important;
+  font-size: 12px;
+  line-height: 1.42857; }
+  body img {
+    max-width: 96%;
+    max-height: 100%;
+    margin: 0 auto; }
+  body div {
+    display: block; }
+  body a {
+    color: inherit; }
+    body a:link {
+      text-decoration: none !important; }
+  body i {
+    vertical-align: top !important; }
+  body [flex-sm="100"] {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    box-sizing: border-box; }
+  body [flex-xs="100"] {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    box-sizing: border-box; }
+
+md-icon {
+  vertical-align: top !important; }
+
+.md-title {
+  font-size: x-large; }
+
+md-card-header {
+  width: 100%; }
+
+md-card {
+  min-width: 200px; }
+
+*:focus {
+  outline: none; }
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  /* height: 1em;
+   line-height: 1;*/
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }
+
+md-sidenav, md-backdrop {
+  overflow: inherit !important; }
+
+.md-toolbar-tools .ion-navicon-round {
+  font-size: large; }
+
+.md-toolbar-tools .md-accent {
+  position: absolute;
+  width: 100%; }
+  .md-toolbar-tools .md-accent .md-input {
+    line-height: normal;
+    border: none;
+    width: 60%;
+    font-size: small;
+    padding-left: 10px; }
+
+.md-toolbar-tools .btn-back-img {
+  height: 24px;
+  width: 24px; }
+
+.nav-left-menu {
+  font-weight: bold;
+  font-size: small; }
+  .nav-left-menu .nav-left-sub-menu {
+    margin-top: 5px;
+    font-size: x-small; }
+
+.md-sidenav-right {
+  background-color: #354048; }
+  .md-sidenav-right .list-item .bullet {
+    padding-right: 20px;
+    margin-top: -28px; }
+  .md-sidenav-right .list-item .list-item-title {
+    font-size: x-small;
+    font-weight: bolder; }
+  .md-sidenav-right .list-item .list-item-body {
+    font-size: x-small; }
+  .md-sidenav-right .divider {
+    margin: 5%; }
+
+.nav-right {
+  background-color: #354048; }
+
+md-checkbox {
+  margin-bottom: 0px !important; }
+  md-checkbox .md-container {
+    width: 15px !important;
+    height: 15px !important;
+    background: #C0C0C0 !important; }
+  md-checkbox .md-icon {
+    width: 15px !important;
+    height: 15px !important;
+    background: #C0C0C0 !important;
+    border: solid #C0C0C0; }
+  md-checkbox.md-checked .md-icon {
+    background: #595959 !important; }
+    md-checkbox.md-checked .md-icon:after {
+      left: 5.6px !important;
+      top: 1.22px !important;
+      width: 5px !important;
+      height: 10px !important;
+      background: #595959 !important; }
+  md-checkbox.md-checked .md-ink-ripple {
+    color: black !important;
+    background: #C0C0C0 !important; }
+
+#table {
+  border-collapse: collapse;
+  width: 100%; }
+  #table tr {
+    cursor: hand; }
+    #table tr:nth-child(odd) {
+      background-color: #f5f5f5; }
+    #table tr:hover {
+      background-color: #f5f5f5; }
+  #table .ion-arrow-down-c, #table ion-arrow-up-c {
+    font-size: 15px;
+    font-weight: lighter;
+    padding-left: 5px; }
+  #table th, #table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: none; }
+
+i.icon.ion-android-more-horizontal {
+  font-size: x-large; }
+
+i.icon.ion-android-more-vertical {
+  font-size: x-large; }
+
+::-webkit-scrollbar {
+  width: 10px; }
+
+md-progress-linear {
+  padding: 2% 0% !important; }
+  md-progress-linear .md-bar {
+    background-color: #3F51B5; }
+
+.card.sponsor md-card-header {
+  padding-bottom: 0px; }
+
+.card.sponsor md-card-content {
+  padding-top: 0px; }
+
+.card.sponsor md-list-item {
+  padding-left: 0px; }
+
+.card.sponsor .title {
+  font-weight: bold;
+  font-size: normal; }
+
+.card.sponsor .text {
+  font-size: x-small; }
+
+.card .fund-progress {
+  float: right;
+  padding-bottom: 10px;
+  padding-right: 20px;
+  padding-left: 10px;
+  font-size: small; }
+
+.card md-menu {
+  padding: 0px; }
+
+.card md-list {
+  padding: 0px; }
+
+.card md-card-content {
+  font-size: x-small; }
+
+.grey-box .left-panel {
+  height: auto; }
+  .grey-box .left-panel .logo {
+    margin: 10% 10% 5% 10%;
+    padding-left: 25px;
+    padding-right: 25px; }
+  .grey-box .left-panel .md-primary {
+    padding: 2% 5% 2% 5%;
+    width: 80%; }
+
+.grey-box .right-panel .md-icon-button {
+  float: right;
+  padding: 10px; }
+
+.grey-box .right-panel .md-title {
+  padding: 0px;
+  font-size: small;
+  font-weight: bold; }
+  .grey-box .right-panel .md-title.md-sub-title {
+    font-size: small; }
+    .grey-box .right-panel .md-title.md-sub-title.md-subhead {
+      font-size: x-small; }
+
+.chart .chart-line {
+  max-width: 100%;
+  max-height: 100%; }
+
+.chart .pie {
+  width: 80% !important; }
+
+.chart .pie-legend-color {
+  height: 8px;
+  width: 8px; }
+
+.chart i {
+  font-size: large; }
+
+.chart .pie-count {
+  font-weight: bold; }
+
+/*# sourceMappingURL=main.css.map */

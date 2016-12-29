@@ -1,0 +1,116 @@
+<md-toolbar>
+
+    <!--      This menu will be shown by default and will hide on search button click-->
+
+    <div class="md-toolbar-tools toolbar" ng-hide="showSearchBarDiv">
+        
+        <md-button class="md-icon-button" ng-click="toggleLeft()">
+            <md-tooltip>Menu</md-tooltip>
+            <i class="icon ion-navicon-round"></i>
+        </md-button>
+
+        <!--<img class="logo" src="assets/images/logo.jpg">-->
+
+        <!--<md-menu md-offset="0 -7">-->
+            <!--<md-button aria-label="Open demo menu" class="md-icon-button" ng-click="$mdOpenMenu($event)">-->
+                <!--hskfs ksjdhfksd-->
+            <!--</md-button>-->
+            <!--<md-menu-content width="4">-->
+                <!--<md-menu-item ng-repeat="item in [1, 2, 3]">-->
+                    <!--<md-button ng-click="ctrl.announceClick($index)"> <span md-menu-align-target>Option</span> {{item}} </md-button>-->
+                <!--</md-menu-item>-->
+            <!--</md-menu-content>-->
+        <!--</md-menu>-->
+
+        <md-menu>
+            <md-button class="md-button" ng-click="$mdOpenMenu($event)" show-gt-md hide-xs>
+                <md-tooltip>Measurements</md-tooltip>
+                Measurements
+            </md-button>
+            <md-menu-content width="4">
+                <md-menu-item>
+                    <md-button>
+                        <a ng-href="#measurement">New Measurement</a>
+                    </md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button>
+                        <a ng-href="#measurement/dress-type/list">Dress Type Master</a>
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+
+
+        <md-menu>
+            <md-button class="md-button" ng-click="$mdOpenMenu($event)" show-gt-md hide-xs>
+                <md-tooltip>Masters</md-tooltip>
+                Masters
+            </md-button>
+            <md-menu-content width="4">
+                <md-menu-item>
+                    <md-button>
+                        <a ng-href="#measurement/dress-type/list">Dress Type Master</a>
+                    </md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button>
+                        <a ng-href="#user/customer/list">Customer Master</a>
+                    </md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button>
+                        <a ng-href="#user/list">User Master</a>
+                    </md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button>
+                        <a ng-href="#user/worker/list">Worker Master</a>
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+
+
+
+
+
+        <md-menu>
+            <md-button class="md-button" ng-click="$mdOpenMenu($event)" show-gt-md hide-xs>
+                <md-tooltip>ORDERS</md-tooltip>
+                Orders
+            </md-button>
+            <md-menu-content width="4">
+                <md-menu-item>
+                    <md-button>
+                        <a ng-href="#order">Order</a>
+                    </md-button>
+                </md-menu-item>
+                <md-menu-item>
+                    <md-button>
+                        <a ng-href="#order/bill">Bill</a>
+                    </md-button>
+                </md-menu-item>
+            </md-menu-content>
+        </md-menu>
+
+
+        <!-- fill up the space between left and right area -->
+        <span flex></span>
+
+
+
+        <md-button class="md-button" show-gt-sm hide-xs>
+            <md-tooltip>User</md-tooltip>
+            Shrikant Gond
+        </md-button>
+        <md-button class="md-button separator" show-gt-sm hide-xs>
+            <md-tooltip>Log out</md-tooltip>
+            LOG OUT
+        </md-button>        
+
+    </div>
+
+
+
+</md-toolbar>

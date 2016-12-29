@@ -1,0 +1,49 @@
+<md-sidenav flex class="md-sidenav-left md-whiteframe-z2 left-nav"
+            md-is-locked-open="$mdMedia('gt-md')" md-component-id="left"
+        style="max-width: 240px;">
+    <md-content class="left-nav nav-left-menu" layout-padding>
+
+
+        <md-list>
+
+            <md-list-item style="
+            margin: -16px -16px 32px -16px;padding: 0px;height: 64px;">
+                <img src="assets/images/logo.png" alt="user" />
+            </md-list-item>
+
+            <md-list-item style="
+            /*background-color: #bce8f1;*/
+display:none;
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#d0e4f7+0,00b3e2+24,00b3e2+50,00b3e2+79,87bcea+100 */
+background: rgb(208,228,247); /* Old browsers */
+background: -moz-linear-gradient(-45deg,  rgba(208,228,247,1) 0%, rgba(0,179,226,1) 24%, rgba(0,179,226,1) 50%, rgba(0,179,226,1) 79%, rgba(135,188,234,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  rgba(208,228,247,1) 0%,rgba(0,179,226,1) 24%,rgba(0,179,226,1) 50%,rgba(0,179,226,1) 79%,rgba(135,188,234,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  rgba(208,228,247,1) 0%,rgba(0,179,226,1) 24%,rgba(0,179,226,1) 50%,rgba(0,179,226,1) 79%,rgba(135,188,234,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0e4f7', endColorstr='#87bcea',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+            margin: -16px -16px 16px -16px;">
+                <div style="padding: 16px;">
+                    <img src="assets/images/UMale.jpg" class="md-avatar" alt="user" />
+                    <div>
+                        Shrikant Gond
+                    </div>
+                    <div>
+                        <md-button style="padding: 0px; margin: 0px;text-transform: none;text-decoration: none;" class="md-button" ng-href="#" >
+                            shrikantg@winjit.com
+                        </md-button>
+                    </div>
+                </div>
+            </md-list-item>
+
+            <md-list-item style="margin:-16px;" ng-repeat="item in left_menu" ng-href="{{item.link}}">
+                <i style="font-size: x-large;" class={{item.icon}}></i>
+                <!--<md-button class="md-button" style="text-decoration: none;" ng-href="{{item.link}}" >-->
+                    <!--{{item.title}}-->
+                <!--</md-button>-->
+                <p style="margin: 0px 10px;">{{item.title}}</p>
+                <span flex></span>
+                <label ng-hide="{{item.count ===0}}">{{item.count}}</label>
+            </md-list-item>
+        </md-list>
+    </md-content>
+</md-sidenav>

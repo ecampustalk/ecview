@@ -1,0 +1,52 @@
+//Slide animation for all the views with class name as slide
+.slide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+
+  &.ng-enter{
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    left: 100%;
+  }
+  &.ng-leave{
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    left: 0;
+  }
+  &.ng-enter-active{
+    left: 0;
+  }
+  &.ng-leave-active{
+    left:-100%;
+  }
+}
+
+//Fade animation for all the views with class name as fade
+.fade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  opacity: 1;
+
+  &.ng-enter{
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    opacity: 0;
+  }
+  &.ng-leave{
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    opacity: 1;
+  }
+  &.ng-enter-active{
+    opacity: 1;
+  }
+  &.ng-leave-active{
+    opacity: 0;
+  }
+}

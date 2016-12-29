@@ -1,0 +1,102 @@
+<md-card style="max-width: 400px;margin: 10px auto;vertical-align:middle;" flex-gt-xs="33" layout-align="center center">
+    <md-card-header>
+        <md-card-header-text class="md-title">
+            <div>Issue Book</div>
+        </md-card-header-text>
+    </md-card-header>
+
+    <md-card-content layout-fill style="text-align: center;">
+
+        <!--<md-input-container class="md-icon-float md-block">-->
+            <!--<label>Amount</label>-->
+            <!--<input ng-model="transaction.amount" type="text">-->
+        <!--</md-input-container>-->
+
+        <!--<md-input-container class="md-icon-float md-block">-->
+            <!--<label>Quantity</label>-->
+            <!--<input ng-model="transaction.quantity" type="text">-->
+        <!--</md-input-container>-->
+
+        <!--<md-autocomplete md-selected-item="selectedModule"-->
+                         <!--md-search-text="searchModule" md-items="Module in getModules(searchModule)"-->
+                         <!--md-item-text="Module.name" placeholder="Select From Module" md-no-cache="true">-->
+            <!--<md-item-template>-->
+                <!--<span md-highlight-text="searchModule" md-highlight-flags="^i">{{Module.name}}</span>-->
+            <!--</md-item-template>-->
+            <!--<md-not-found> No matches found.-->
+            <!--</md-not-found>-->
+        <!--</md-autocomplete>-->
+
+        <!--<md-autocomplete md-selected-item="selectedModule"-->
+                         <!--md-search-text="searchModule" md-items="Module in getModules(searchModule)"-->
+                         <!--md-item-text="Module.name" placeholder="Select To Module" md-no-cache="true">-->
+            <!--<md-item-template>-->
+                <!--<span md-highlight-text="searchModule" md-highlight-flags="^i">{{Module.name}}</span>-->
+            <!--</md-item-template>-->
+            <!--<md-not-found> No matches found.-->
+            <!--</md-not-found>-->
+        <!--</md-autocomplete>-->
+
+
+
+        <md-input-container flex="100" class="md-icon-float md-block">
+            <label>Select Book</label>
+            <md-select ng-model="book.id">
+                <md-option ng-repeat="book in books" value="{{book.ID}}">
+                    {{book.Name}}
+                </md-option>
+            </md-select>
+        </md-input-container>
+
+        <md-input-container flex="100" class="md-icon-float md-block">
+            <label>Select User</label>
+            <md-select ng-model="user.id">
+                <md-option ng-repeat="user in users" value="{{user.ID}}">
+                    {{user.Name}}
+                </md-option>
+            </md-select>
+        </md-input-container>
+
+        <md-input-container flex="100" class="md-icon-float md-block">
+            <label>Select Transaction Type</label>
+            <md-select ng-model="transaction.id">
+                <md-option ng-repeat="transaction in transaction_types" value="{{transaction.ID}}">
+                    {{transaction.Name}}
+                </md-option>
+            </md-select>
+        </md-input-container>
+
+        <!--<md-autocomplete md-selected-item="selectedUser"-->
+                         <!--md-search-text="searchUser" md-items="User in getUsers(searchUser)"-->
+                         <!--md-item-text="User.name" placeholder="Select To User" md-no-cache="true">-->
+            <!--<md-item-template>-->
+                <!--<span md-highlight-text="searchUser" md-highlight-flags="^i">{{User.name}}</span>-->
+            <!--</md-item-template>-->
+            <!--<md-not-found> No matches found.-->
+            <!--</md-not-found>-->
+        <!--</md-autocomplete>-->
+
+        <!--<md-autocomplete md-selected-item="selectedTransactionType"-->
+                         <!--md-search-text="searchTransactionType" md-items="TransactionType in getTransactionTypes(searchTransactionType)"-->
+                         <!--md-item-text="TransactionType.name" placeholder="Select Transaction Type" md-no-cache="true">-->
+            <!--<md-item-template>-->
+                <!--<span md-highlight-text="searchTransactionType" md-highlight-flags="^i">{{TransactionType.name}}</span>-->
+            <!--</md-item-template>-->
+            <!--<md-not-found> No matches found.-->
+            <!--</md-not-found>-->
+        <!--</md-autocomplete>-->
+
+        <!--<md-autocomplete md-selected-item="selectedLibrary"-->
+                         <!--md-search-text="searchLibrary" md-items="Library in getLibrarys(searchLibrary)"-->
+                         <!--md-item-text="Library.name" placeholder="Select Library" md-no-cache="true">-->
+            <!--<md-item-template>-->
+                <!--<span md-highlight-text="searchLibrary" md-highlight-flags="^i">{{Library.name}}</span>-->
+            <!--</md-item-template>-->
+            <!--<md-not-found> No matches found.-->
+            <!--</md-not-found>-->
+        <!--</md-autocomplete>-->
+        
+        <md-button class="md-button md-raised" style="margin: 0 auto;margin-top: 20px;" ng-click="add_transaction()">Submit</md-button>
+
+    </md-card-content>
+</md-card>

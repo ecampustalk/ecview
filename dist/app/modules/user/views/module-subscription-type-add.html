@@ -1,0 +1,54 @@
+<md-card style="vertical-align:middle;" layout-align="center center">
+    <md-card-header>
+        <md-card-header-text class="md-title">
+            <div>Add new module subscription type</div>
+        </md-card-header-text>
+    </md-card-header>
+
+    <md-card-content layout-fill style="text-align: center;">
+
+        <div layout="row" layout-wrap>
+
+            <md-input-container flex-gt-md="25" flex="100" class="md-icon-float md-block">
+                <label>Name</label>
+                <input ng-model="module.name" required type="text">
+                <div style="float: left;" class="hint">Tell us what we should call you!</div>
+            </md-input-container>
+
+            <md-input-container flex="100" class="md-icon-float md-block">
+                <!-- Use floating label instead of placeholder -->
+                <label>Description</label>
+                <textarea ng-model="module.biography" md-maxlength="200" rows="5" md-select-on-focus></textarea>
+            </md-input-container>
+
+            <div flex="100" style="text-align: left;">
+                <md-checkbox ng-model="module_subscription_type.permanent">Permanent Subcription ?</md-checkbox>
+            </div>
+
+
+            <md-input-container ng-if="module_subscription_type.permanent" flex-gt-md="25" flex="100" class="md-icon-float md-block">
+                <label>Days</label>
+                <input ng-model="module_subscription_type.days" required type="number">
+                <div style="float: left;" class="hint">Tell us what we should call you!</div>
+            </md-input-container>
+
+            <md-input-container ng-if="module_subscription_type.permanent" flex-gt-md="25" flex="100" class="md-icon-float md-block">
+                <label>Months</label>
+                <input ng-model="module_subscription_type.months" required type="number">
+                <div style="float: left;" class="hint">Tell us what we should call you!</div>
+            </md-input-container>
+
+            <md-input-container ng-if="module_subscription_type.permanent" flex-gt-md="25" flex="100" class="md-icon-float md-block">
+                <label>Years</label>
+                <input ng-model="module_subscription_type.years" required type="number">
+                <div style="float: left;" class="hint">Tell us what we should call you!</div>
+            </md-input-container>
+
+
+
+        </div>
+
+        <md-button class="md-button md-raised" style="margin: 0 auto;">Submit</md-button>
+
+    </md-card-content>
+</md-card>

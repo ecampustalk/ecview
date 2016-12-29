@@ -1,0 +1,48 @@
+<md-card flex-wrap>
+
+    <md-card-header>
+        <md-card-header-text class="md-title">
+            <div layout="row" layout-align="space-between center">
+                <label>Result</label>
+            </div>
+            <span class="md-subhead">Include inactive deals</span>
+        </md-card-header-text>
+    </md-card-header>
+    <md-card-content>
+
+        <table class="table m0" style="font-size: 11px;-webkit-font-smoothing: antialiased;font-family: roboto;
+    font-size: 13px;">
+            <thead>
+            <tr style="text-transform: uppercase;">
+                <th ng-click ="dosort('dealname')">Deal(4) <md-icon><i id="dealname" class="icon ion-chevron-down"></i></md-icon></th>
+
+                <th ng-click ="dosort('status')">Status<md-icon><i id="status" class="icon ion-chevron-down"></i></md-icon></th>
+                <th ng-click ="dosort('size')" class="text-right">Size<md-icon><i id="size" class="icon ion-chevron-down"></i></md-icon></th>
+                <!--<th ng-click ="dosort('funded')" hide-sm hide-xs class="text-right">Funded<md-icon><i id="funded" class="icon ion-chevron-down"></i></md-icon></th>-->
+                <!--<th ng-click ="dosort('investors')" hide-sm hide-xs class="text-right">Investors<md-icon><i id="investors" class="icon ion-chevron-down"></i></md-icon></th>-->
+                <!--<th ng-click ="dosort('closeing')" hide-sm hide-xs class="text-right">Closing IN<md-icon><i id="closeing" class="icon ion-chevron-down"></i></md-icon></th>-->
+            </tr>
+            </thead>
+
+            <tbody>
+
+            <tr id={{record.id}} ng-click ="rowClick($event);" ng-repeat="record in deals | orderBy:sortby:reverse">
+                <td>
+                    {{record.dealname}}
+                </td>
+                <td>{{record.status}}</td>
+                <td hide-sm hide-xs class="text-right">
+                    {{record.size | currency:'$'}}
+                </td>
+                <!--<td class="text-right GrayFont">{{record.funded | currency:'$'}}</td>-->
+                <!--<td hide-sm hide-xs class="text-right GrayFont">{{record.investors}}</td>-->
+                <!--<td hide-sm hide-xs class="text-right GrayFont">{{record.closeing}} Days</td>-->
+            </tr>
+
+
+            </tbody>
+        </table>
+
+    </md-card-content>
+
+</md-card>

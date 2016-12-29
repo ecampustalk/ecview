@@ -1,0 +1,95 @@
+<md-card style="vertical-align:middle;" layout-align="center center">
+    <md-card-header>
+        <md-card-header-text class="md-title">
+            <div>Add new user to the system</div>
+        </md-card-header-text>
+    </md-card-header>
+
+    <md-card-content layout-fill style="text-align: center;">
+
+        <div layout="row" layout-wrap>
+
+            <!--<md-autocomplete flex-gt-sm="25" md-selected-item="selectedLibrary"-->
+            <!--md-search-text="searchLibrary" md-items="library in getLibraries(searchLibrary)"-->
+            <!--md-item-text="library.name" placeholder="Select Library" md-no-cache="true">-->
+            <!--<md-item-template>-->
+            <!--<span md-highlight-text="searchLibrary" md-highlight-flags="^i">{{library.name}}</span>-->
+            <!--</md-item-template>-->
+            <!--<md-not-found> No matches found.-->
+            <!--</md-not-found>-->
+            <!--</md-autocomplete>-->
+
+            <!--<md-autocomplete flex-gt-sm="25" md-selected-item="selectedPublication"-->
+            <!--md-search-text="searchPublication" md-items="publication in getPublications(searchPublication)"-->
+            <!--md-item-text="publication.name" placeholder="Select Publication" md-no-cache="true">-->
+            <!--<md-item-template>-->
+            <!--<span md-highlight-text="searchPublication" md-highlight-flags="^i">{{publication.name}}</span>-->
+            <!--</md-item-template>-->
+            <!--<md-not-found> No matches found.-->
+            <!--</md-not-found>-->
+            <!--</md-autocomplete>-->
+
+            <!--<md-autocomplete flex-gt-sm="25" md-selected-item="selectedAuthor"-->
+            <!--md-search-text="searchAuthor" md-items="author in getAuthors(searchAuthor)"-->
+            <!--md-item-text="author.name" placeholder="Select Author" md-no-cache="true">-->
+            <!--<md-item-template>-->
+            <!--<span md-highlight-text="searchAuthor" md-highlight-flags="^i">{{author.name}}</span>-->
+            <!--</md-item-template>-->
+            <!--<md-not-found> No matches found.-->
+            <!--</md-not-found>-->
+            <!--</md-autocomplete>-->
+
+            <!--<md-autocomplete flex-gt-sm="25" md-selected-item="selectedBookType"-->
+            <!--md-search-text="searchBookType" md-items="book_type in getBookTypes(searchBookType)"-->
+            <!--md-item-text="book_type.name" placeholder="Select Book Type" md-no-cache="true">-->
+            <!--<md-item-template>-->
+            <!--<span md-highlight-text="searchBookType" md-highlight-flags="^i">{{book_type.name}}</span>-->
+            <!--</md-item-template>-->
+            <!--<md-not-found> No matches found.-->
+            <!--</md-not-found>-->
+            <!--</md-autocomplete>-->
+
+
+            <md-input-container flex-gt-sm="25" flex="100" class="md-icon-float md-block">
+                <label>Name</label>
+                <input ng-model="user.name" required type="text">
+                <div style="float: left;" class="hint">Tell us what we should call you!</div>
+            </md-input-container>
+
+            <md-input-container flex-gt-sm="25" flex="100" class="md-icon-float md-block">
+                <!-- Use floating label instead of placeholder -->
+                <label>Email ID</label>
+                <input ng-model="user.email" type="text">
+                <div style="float: left;" class="hint">Your email id will be used for login!</div>
+            </md-input-container>
+
+
+            <md-input-container flex-gt-sm="25" flex="100" class="md-icon-float md-block">
+                <!-- Use floating label instead of placeholder -->
+                <label>Password</label>
+
+                <input type="password" ng-model="user.password">
+            </md-input-container>
+
+            <md-input-container flex-gt-sm="25" flex="100" class="md-icon-float md-block">
+                <!-- Use floating label instead of placeholder -->
+                <label>Confirm Password</label>
+
+                <input type="password">
+            </md-input-container>
+
+            <md-input-container flex-gt-sm="25" flex="100" class="md-icon-float md-block">
+                <label>User Type</label>
+                <md-select ng-model="user.state">
+                    <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+                        {{state.abbrev}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+        </div>
+
+        <md-button class="md-button md-raised" style="margin: 0 auto;">Next</md-button>
+
+    </md-card-content>
+</md-card>

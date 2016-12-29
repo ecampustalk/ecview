@@ -1,0 +1,120 @@
+<md-card style="vertical-align:middle;" layout-align="center center">
+    <md-card-header>
+        <md-card-header-text class="md-title">
+            <div>Add Book</div>
+        </md-card-header-text>
+    </md-card-header>
+
+    <md-card-content layout-fill style="text-align: center;">
+
+        <div layout="row" layout-wrap>
+
+            <!--<md-autocomplete flex-gt-sm="25" md-selected-item="selectedLibrary"-->
+                             <!--md-search-text="searchLibrary" md-items="library in getLibraries(searchLibrary)"-->
+                             <!--md-item-text="library.name" placeholder="Select Library" md-no-cache="true">-->
+                <!--<md-item-template>-->
+                    <!--<span md-highlight-text="searchLibrary" md-highlight-flags="^i">{{library.name}}</span>-->
+                <!--</md-item-template>-->
+                <!--<md-not-found> No matches found.-->
+                <!--</md-not-found>-->
+            <!--</md-autocomplete>-->
+
+            <!--<md-autocomplete flex-gt-sm="25" md-selected-item="selectedPublication"-->
+                             <!--md-search-text="searchPublication" md-items="publication in getPublications(searchPublication)"-->
+                             <!--md-item-text="publication.name" placeholder="Select Publication" md-no-cache="true">-->
+                <!--<md-item-template>-->
+                    <!--<span md-highlight-text="searchPublication" md-highlight-flags="^i">{{publication.name}}</span>-->
+                <!--</md-item-template>-->
+                <!--<md-not-found> No matches found.-->
+                <!--</md-not-found>-->
+            <!--</md-autocomplete>-->
+
+            <!--<md-autocomplete flex-gt-sm="25" md-selected-item="selectedAuthor"-->
+                             <!--md-search-text="searchAuthor" md-items="author in getAuthors(searchAuthor)"-->
+                             <!--md-item-text="author.name" placeholder="Select Author" md-no-cache="true">-->
+                <!--<md-item-template>-->
+                    <!--<span md-highlight-text="searchAuthor" md-highlight-flags="^i">{{author.name}}</span>-->
+                <!--</md-item-template>-->
+                <!--<md-not-found> No matches found.-->
+                <!--</md-not-found>-->
+            <!--</md-autocomplete>-->
+
+            <!--<md-autocomplete flex-gt-sm="25" md-selected-item="selectedBookType"-->
+                             <!--md-search-text="searchBookType" md-items="book_type in getBookTypes(searchBookType)"-->
+                             <!--md-item-text="book_type.name" placeholder="Select Book Type" md-no-cache="true">-->
+                <!--<md-item-template>-->
+                    <!--<span md-highlight-text="searchBookType" md-highlight-flags="^i">{{book_type.name}}</span>-->
+                <!--</md-item-template>-->
+                <!--<md-not-found> No matches found.-->
+                <!--</md-not-found>-->
+            <!--</md-autocomplete>-->
+
+            <md-input-container flex-gt-sm="25" flex="100" class="md-icon-float md-block">
+                <label>Book Type</label>
+                <md-select ng-model="book_type.id">
+                    <md-option ng-repeat="book_type in book_types" value="{{book_type.ID}}">
+                        {{book_type.Name}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container flex-gt-sm="25" flex="100" class="md-icon-float md-block">
+                <label>Author</label>
+                <md-select ng-model="author.id">
+                    <md-option ng-repeat="author in authors" value="{{author.ID}}">
+                        {{author.Name}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container flex-gt-sm="25" flex="100" class="md-icon-float md-block">
+                <label>Publication</label>
+                <md-select ng-model="publication.id">
+                    <md-option ng-repeat="publication in publications" value="{{publication.ID}}">
+                        {{publication.Name}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+        <md-input-container flex-gt-sm="25" flex="100" class="md-icon-float md-block">
+            <label>Name</label>
+            <input ng-model="book.name" required type="text">
+        </md-input-container>
+
+        <md-input-container flex-gt-sm="25" flex="100" class="md-icon-float md-block">
+            <label>ISBN</label>
+            <input ng-model="book.isbn" type="text">
+        </md-input-container>
+
+        <md-input-container flex-gt-sm="25" flex="100" class="md-icon-float md-block">
+            <label>Edition</label>
+            <input ng-model="book.edition" type="text">
+        </md-input-container>
+
+        <md-input-container flex-gt-sm="25" flex="100" class="md-icon-float md-block">
+            <label>Year</label>
+            <input ng-model="book.year" type="number" step="1">
+        </md-input-container>
+
+        <md-input-container flex-gt-sm="25" flex="100" class="md-icon-float md-block">
+            <label>Price</label>
+            <input ng-model="book.price" type="number" step="0.01">
+        </md-input-container>
+
+        <md-input-container flex-gt-sm="25" flex="100" class="md-icon-float md-block">
+            <label>Quantity</label>
+            <input ng-model="book.quantity" type="number" step="1">
+        </md-input-container>
+
+        <md-input-container flex-gt-sm="25" flex="100" class="md-icon-float md-block">
+            <label>Avilable Stock</label>
+            <input ng-model="book.avilable_stock" type="number" step="1">
+        </md-input-container>
+
+
+        </div>
+
+        <md-button class="md-button md-raised" style="margin: 0 auto;" ng-click="add_book()">Submit</md-button>
+
+    </md-card-content>
+</md-card>

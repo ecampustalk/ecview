@@ -1,0 +1,82 @@
+<md-card style="vertical-align:middle;" layout-align="center center">
+    <md-card-header style="padding-bottom: 0px;">
+        <md-card-header-text>
+            <div layout="row" layout-wrap>
+                <div class="md-title">List of Books</div>
+                <span flex></span>
+
+                <div layout="row" layout-wrap>
+                    <md-button class="md-button md-raised" style="height: 25px;" ng-href="#/library/book">Add Book</md-button>
+                </div>
+
+                <md-input-container style="margin: 5px 0px;" flex-gt-xs="25" flex="100" class="md-icon-float md-block">
+                    <label>Search</label>
+                    <input ng-model="searchtext" type="text">
+                </md-input-container>
+            </div>
+        </md-card-header-text>
+    </md-card-header>
+
+    <md-card-content layout-fill style="text-align: center;padding-top: 0px;">
+
+        <table id="table" class="table table-hover table-mc-light-blue" >
+            <thead>
+            <tr style="text-transform: uppercase;">
+                <th ng-click ="sort('name')">Select<md-icon><i id="id" class="icon ion-arrow-down-c"></i></md-icon></th>
+                <th ng-click ="sort('name')">Name<md-icon><i id="name" class="icon ion-arrow-down-c"></i></md-icon></th>
+                <th ng-click ="sort('year')">Edition<md-icon><i id="year" class="icon ion-arrow-down-c"></i></md-icon></th>
+                <th ng-click ="sort('start_date')" hide-xs class="text-right">Price<md-icon><i id="start_date" class="icon ion-arrow-down-c"></i></md-icon></th>
+                <th ng-click ="sort('end_date')" hide-xs class="text-right">Quantity<md-icon><i id="end_date" class="icon ion-arrow-down-c"></i></md-icon></th>
+            </tr>
+            </thead>
+
+            <tbody>
+
+            <tr id={{record.ID}} ng-click ="rowClick($event);" ng-repeat="record in books">
+                <td>
+                    <md-checkbox id={{record.ID}}></md-checkbox>
+                </td>
+                <td>
+                    {{record.Name}}
+                </td>
+                <td>{{record.Edition}}</td>
+                <td hide-xs class="text-right">
+                    {{record.Price}}
+                </td>
+                <td hide-xs class="text-right">
+                    {{record.Quantity}}
+                </td>
+
+            </tr>
+
+
+            </tbody>
+        </table>
+
+        <div layout="row" style="padding-top: 10px;width: 100%">
+
+            <md-button style="font-size: large;" class="md-icon-button">
+                <i class="icon ion-arrow-left-a"></i>
+            </md-button>
+
+            <md-button style="font-size: large;" class="md-icon-button">
+                <i class="icon ion-chevron-left"></i>
+            </md-button>
+
+            <md-button class="md-fab md-mini md-primary" ng-disabled style="
+    height: 25px;width: 25px;line-height: 25px;min-height: 25px;" aria-label="Page Number">
+                <label style="font-size: smaller; ">24</label>
+            </md-button>
+
+            <md-button style="font-size: large;" class="md-icon-button">
+                <i class="icon ion-chevron-right"></i>
+            </md-button>
+
+            <md-button style="font-size: large;" class="md-icon-button">
+                <i class="icon ion-arrow-right-a"></i>
+            </md-button>
+
+        </div>
+
+    </md-card-content>
+</md-card>

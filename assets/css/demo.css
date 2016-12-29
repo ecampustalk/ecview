@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local("roboto"), url("/ecView/assets/fonts/Roboto-Regular-webfont.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'roboto light';
+    font-style: normal;
+    font-weight: 100;
+    src: local("roboto light"), url("/ecView/assets/fonts/Roboto-Light-webfont.woff") format("woff");
+}
+
+body {
+    font-family: 'roboto';
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    outline: none !important;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
+img{
+    width:100%;
+}
+
+.md-title{
+    font-size: x-large;
+}
+
+md-card-header{
+    width: 100%;
+}
+
+md-card{
+    min-width: 200px;
+}
+
+.left-nav{
+    /*background-color: silver;*/
+    /*background-image: linear-gradient(335deg, #b00 23px, transparent 23px),*/
+    /*linear-gradient(155deg, #d00 23px, transparent 23px),*/
+    /*linear-gradient(335deg, #b00 23px, transparent 23px),*/
+    /*linear-gradient(155deg, #d00 23px, transparent 23px);*/
+    /*background-size: 58px 58px;*/
+    /*background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;*/
+
+    /*background-color:#556;*/
+    /*background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),*/
+    /*linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),*/
+    /*linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),*/
+    /*linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),*/
+    /*linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a),*/
+    /*linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);*/
+    /*background-size:80px 140px;*/
+    /*background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;*/
+
+    /*background-color: gray;*/
+    /*background-image: linear-gradient(90deg, transparent 50%, rgba(255,255,255,.5) 50%);*/
+    /*background-size: 50px 50px;*/
+
+    /*background:*/
+            /*linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,*/
+            /*linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,*/
+            /*linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,*/
+            /*linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,*/
+            /*linear-gradient(90deg, #1b1b1b 10px, transparent 10px),*/
+            /*linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);*/
+    /*background-color: #131313;*/
+    /*background-size: 20px 20px;*/
+}
+
+.content-page{
+
+    /*  Papper background pattern  */
+    /*background-color: #fff;*/
+    /*background-image:*/
+            /*linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),*/
+            /*linear-gradient(#eee .1em, transparent .1em);*/
+    /*background-size: 100% 1.2em;*/
+
+    /* Bricks background pattern */
+
+
+}
+
+md-toolbar{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#00b3e2+0,1a6acc+100 */
+    background: rgb(0,179,226); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(0,179,226,1) 0%, rgba(26,106,204,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(0,179,226,1) 0%,rgba(26,106,204,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(0,179,226,1) 0%,rgba(26,106,204,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00b3e2', endColorstr='#1a6acc',GradientType=0 ); /* IE6-9 */
+
+}
+
+
+/* Original styles*/
+
+#table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.ion-arrow-down-c,ion-arrow-up-c{
+    font-size: 15px;
+    font-weight: lighter;
+    padding-left: 5px;
+}
+
+#table tr{
+    cursor: hand;
+}
+
+#table th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: none;
+}
+
+#table tbody tr:nth-child(odd) {
+    background-color: #f5f5f5;
+}
+
+#table tbody tr:hover{background-color:#f5f5f5}
+
+
+.slide {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.slide.ng-enter,
+.slide.ng-leave {
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+.slide.ng-enter {
+    left: 100%;
+}
+.slide.ng-enter-active {
+    left: 0;
+}
+.slide.ng-leave {
+    left: 0;
+}
+.slide.ng-leave-active {
+    left: -100%;
+}
+
+.fade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 1;
+}
+.fade.ng-enter,
+.fade.ng-leave {
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+.fade.ng-enter {
+    opacity: 0;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+}
+.fade.ng-leave {
+    opacity: 1;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+}
+
+.flip {
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transition: all 100ms ease 0s;
+    transition: all 100ms ease 0s;
+}
+.flip.ng-enter {
+    transform: rotateX(-180deg);
+    -webkit-transform: rotateX(-180deg);
+    left: 100%;
+}
+.flip.ng-enter-active {
+  /*transform: rotateX(0deg);*/
+  /*-webkit-transform: rotateX(0deg);*/
+    left: 0%;
+}
+.flip.ng-leave {
+    -webkit-transform: rotateX(0deg);
+    transform: rotateX(0deg);
+    left: 0%;
+}
+.flip.ng-leave-active {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    left: -100%;
+}
+
+.dashboard-menu {
+// add the vendor prefixed versions as well
+opacity: 0.5;
+}
+
+.dashboard-menu:hover {
+    opacity: 0.5;
+    transition: all 1s;
+}

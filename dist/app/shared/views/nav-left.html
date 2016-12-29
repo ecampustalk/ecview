@@ -1,0 +1,60 @@
+<md-sidenav flex class="md-sidenav-left md-whiteframe-z2 content-page" md-component-id="left">
+    <md-content class="content-page nav-left-menu" layout-padding>
+        <md-list>
+            <md-list-item>
+                <div class="md-list-item-text">
+                    <a ng-href="#measurement" ng-click="toggleLeft()"><b>HOME</b></a>
+                </div>
+            </md-list-item>
+            <md-list-item>
+                <div class="md-list-item-text">
+                    <a ng-href="#user/customer/list" ng-click="toggleLeft()"><b>MASTERS</b></a>
+                    <md-list>
+                        <md-list-item>
+                            <div class="md-list-item-text">
+                                <div class="nav-left-sub-menu"><a href="#user/customer/list" ng-click="toggleLeft()">CUSTOMER MASTER</a></div>
+                                <div class="nav-left-sub-menu"><a href="#measurement/dress-type/list" ng-click="toggleLeft()">DRESS MASTER</a></div>
+                                <div class="nav-left-sub-menu"><a href="#user/list" ng-click="toggleLeft()">USER MASTER</a></div>
+                                <div class="nav-left-sub-menu"><a href="#user/worker/list" ng-click="toggleLeft()">WORKER MASTER</a></div>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                </div>
+            </md-list-item>
+            <md-list-item>
+                <div class="md-list-item-text">
+                    <a ng-href="#measurement" ng-click="toggleLeft()"><b>MEASURMENTS</b></a>
+                    <md-list>
+                        <md-list-item>
+                            <div class="md-list-item-text">
+                                <div class="nav-left-sub-menu"><a href="#measurement/blouse" ng-click="toggleLeft()">BLOUSE MEASUREMENT</a></div>
+                                <div class="nav-left-sub-menu"><a href="#measurement/top" ng-click="toggleLeft()">TOP MEASUREMENT</a></div>
+                                <div class="nav-left-sub-menu"><a href="#measurement/dress-type" ng-click="toggleLeft()">DRESS TYPE</a></div>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                </div>
+            </md-list-item>
+            <md-list-item>
+                <div class="md-list-item-text">
+                    <a ng-href="#order" ng-click="toggleLeft()"><b>ORDERS</b></a>
+                    <md-list>
+                        <md-list-item>
+                            <div class="md-list-item-text">
+                                <div class="nav-left-sub-menu"><a href="#order" ng-click="toggleLeft()">ORDER</a></div>
+                                <div class="nav-left-sub-menu"><a href="#order/bill" ng-click="toggleLeft()">BILL</a></div>
+                            </div>
+                        </md-list-item>
+                    </md-list>
+                </div>
+            </md-list-item>
+            <md-list-item>
+
+                <div class="md-list-item-text">
+                    <a ng-href="#login" ng-click="toggleLeft()"><b>LOGIN</b></a>
+                </div>
+            </md-list-item>
+
+        </md-list>
+    </md-content>
+</md-sidenav>

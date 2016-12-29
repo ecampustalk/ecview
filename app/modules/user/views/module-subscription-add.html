@@ -1,0 +1,44 @@
+<md-card style="vertical-align:middle;" layout-align="center center">
+    <md-card-header>
+        <md-card-header-text class="md-title">
+            <div>Add module subscription to user</div>
+        </md-card-header-text>
+    </md-card-header>
+
+    <md-card-content layout-fill style="text-align: center;">
+
+        <div layout="row" layout-wrap>
+
+            <md-input-container flex-gt-md="25" flex="100" class="md-icon-float md-block">
+                <label>User</label>
+                <md-select ng-model="user.state">
+                    <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+                        {{state.abbrev}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container flex-gt-md="25" flex="100" class="md-icon-float md-block">
+                <label>Module</label>
+                <md-select ng-model="user.state">
+                    <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+                        {{state.abbrev}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+            <md-input-container flex-gt-md="25" flex="100" class="md-icon-float md-block">
+                <label>Subscription Type</label>
+                <md-select ng-model="user.state">
+                    <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+                        {{state.abbrev}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+        </div>
+
+        <md-button class="md-button md-raised" style="margin: 0 auto;">Submit</md-button>
+
+    </md-card-content>
+</md-card>

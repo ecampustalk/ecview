@@ -1,0 +1,77 @@
+<md-card flex-wrap>
+
+    <md-card-header>
+        <md-card-header-text class="md-title">
+            <div layout="row" layout-align="space-between center">
+                <div>DEAL STATISTICS</div>
+                <md-menu>
+                    <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)"><div><i class="icon ion-android-more-horizontal"></i></div>
+                    </md-button>
+                    <md-menu-content width="1">
+                        <md-menu-item ng-repeat="item in [1, 2, 3]">
+                            <md-button ng-click="appController.announceClick($index)">
+                                Option {{item}}
+                            </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+
+            </div>
+        </md-card-header-text>
+    </md-card-header>
+
+
+    <md-card-content layout-align="space-between" style="min-width:250px;">
+
+        <div layout="row" layout-xs="column" layout-align="center center" style="margin-left:10px;margin-right:40px;">
+            <div flex="40" style="margin-right:20px;">
+                <div id="chart"></div>
+            </div>
+            <div flex>
+
+                <div layout="row" layout-align="center center">
+                    <div flex="5" style="padding-right:20px;">
+                        <div style="height:8px;width:8px; background-color:#3182BD;"></div>
+                    </div>
+                    <div flex"80" style="padding-right:10px;">
+                    0% - 20% funded
+                </div>
+                <div flex="5" style="padding-right:10px;color: #A6A6E8;">
+                    1
+                </div>
+            </div>
+
+            <div layout="row" layout-align="center center">
+                <div flex="5" style="padding-right:20px;">
+                    <div style="height:8px;width:8px; background-color:#6BAED6;"></div>
+                </div>
+                <div flex"80" style="padding-right:10px;">
+                0% - 20% funded
+            </div>
+            <div flex="5" style="padding-right:10px;color: #A6A6E8;">
+                4
+            </div>
+        </div>
+
+        <div layout="row" layout-align="center center">
+            <div flex="5" style="padding-right:20px;">
+                <div style="height:8px;width:8px; background-color:#9ECAE1;"></div>
+            </div>
+            <div flex"80" style="padding-right:10px;">
+            0% - 20% funded
+        </div>
+        <div flex="5" style="padding-right:10px;color: #A6A6E8;">
+            2
+        </div>
+        </div>
+
+        </div>
+        </div>
+
+
+
+    </md-card-content>
+
+</md-card>
+
+<script src="assets/js/d3Pie.js"></script>

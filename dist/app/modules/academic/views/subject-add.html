@@ -1,0 +1,63 @@
+<md-card style="max-width: 400px;margin: 10px auto;vertical-align:middle;" flex-gt-xs="33" layout-align="center center">
+    <md-card-header>
+        <md-card-header-text class="md-title">
+            <div>SUBJECT</div>
+        </md-card-header-text>
+    </md-card-header>
+
+    <md-card-content layout-fill style="text-align: center;">
+
+        <md-input-container class="md-icon-float md-block">
+            <label>Subject Name</label>
+            <input ng-model="subject.name" type="text">
+        </md-input-container>
+
+        <md-input-container class="md-icon-float md-block">
+            <label>Subject Waitage</label>
+            <input ng-model="subject.marks" type="text">
+        </md-input-container>
+
+        <md-autocomplete md-selected-item="selectedTeacher"
+                         md-search-text="searchTeacher" md-items="Teacher in getTeachers(searchTeacher)"
+                         md-item-text="Teacher.name" placeholder="Select Teacher" md-no-cache="true">
+            <md-item-template>
+                <span md-highlight-text="searchTeacher" md-highlight-flags="^i">{{Teacher.name}}</span>
+            </md-item-template>
+            <md-not-found> No matches found.
+            </md-not-found>
+        </md-autocomplete>
+
+        <md-autocomplete md-selected-item="selectedSubjectType"
+                         md-search-text="searchSubjectType" md-items="SubjectType in getSubjectTypes(searchSubjectType)"
+                         md-item-text="SubjectType.name" placeholder="Select SubjectType" md-no-cache="true">
+            <md-item-template>
+                <span md-highlight-text="searchSubjectType" md-highlight-flags="^i">{{SubjectType.name}}</span>
+            </md-item-template>
+            <md-not-found> No matches found.
+            </md-not-found>
+        </md-autocomplete>
+
+        <md-autocomplete md-selected-item="selectedSubjectLocation"
+                         md-search-text="searchSubjectLocation" md-items="SubjectLocation in getSubjectLocations(searchSubjectLocation)"
+                         md-item-text="SubjectLocation.name" placeholder="Select SubjectLocation" md-no-cache="true">
+            <md-item-template>
+                <span md-highlight-text="searchSubjectLocation" md-highlight-flags="^i">{{SubjectLocation.name}}</span>
+            </md-item-template>
+            <md-not-found> No matches found.
+            </md-not-found>
+        </md-autocomplete>
+
+        <md-autocomplete md-selected-item="selectedCourse"
+                         md-search-text="searchCourse" md-items="Course in getCourses(searchCourse)"
+                         md-item-text="Course.name" placeholder="Select Course" md-no-cache="true">
+            <md-item-template>
+                <span md-highlight-text="searchCourse" md-highlight-flags="^i">{{Course.name}}</span>
+            </md-item-template>
+            <md-not-found> No matches found.
+            </md-not-found>
+        </md-autocomplete>
+
+        <md-button class="md-button md-raised" style="margin: 0 auto;">Submit</md-button>
+
+    </md-card-content>
+</md-card>

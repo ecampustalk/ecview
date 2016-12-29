@@ -1,0 +1,46 @@
+<md-card style="vertical-align:middle;" layout-align="center center">
+    <md-card-header>
+        <md-card-header-text class="md-title">
+            <div>Add new module to the system</div>
+        </md-card-header-text>
+    </md-card-header>
+
+    <md-card-content layout-fill style="text-align: center;">
+
+        <div layout="row" layout-wrap>
+
+            <md-input-container flex-gt-md="25" flex="100" class="md-icon-float md-block">
+                <label>Name</label>
+                <input ng-model="module.name" required type="text">
+                <div style="float: left;" class="hint">Tell us what we should call you!</div>
+            </md-input-container>
+
+            <md-input-container flex-gt-md="25" flex="100" class="md-icon-float md-block">
+                <label>Friendly Name</label>
+                <input ng-model="module.friendly_name" required type="text">
+                <div style="float: left;" class="hint">Tell us what we should call you!</div>
+            </md-input-container>
+
+            <md-input-container flex-gt-md="25" flex="100" class="md-icon-float md-block">
+                <label>Parent Module</label>
+                <md-select ng-model="user.state">
+                    <md-option ng-repeat="state in states" value="{{state.abbrev}}">
+                        {{state.abbrev}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+
+
+            <md-input-container flex="100" class="md-icon-float md-block">
+                <!-- Use floating label instead of placeholder -->
+                <label>Description</label>
+                <textarea ng-model="module.biography" md-maxlength="200" rows="5" md-select-on-focus></textarea>
+            </md-input-container>
+
+
+        </div>
+
+        <md-button class="md-button md-raised" style="margin: 0 auto;">Next</md-button>
+
+    </md-card-content>
+</md-card>
