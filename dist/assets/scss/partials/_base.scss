@@ -3,7 +3,7 @@ Site-wise default font, color, background and common classes
 */
 
 body{
-  font-family: 'roboto';
+  //font-family: 'roboto';
   -webkit-font-smoothing: antialiased;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   outline: none !important;
@@ -41,7 +41,7 @@ body{
 
 //content page background color, it is applid to left navigation panel and content area
 .content-page{
-  background-color: $color-light-grey !important;
+  //background-color: $color-light-grey !important;
 }
 
 //all the icons will get aligned properly with the adjucent text
@@ -68,4 +68,30 @@ md-card{
 //it will disable the outline/border on focus to any control on the site
 *:focus {
   outline: none;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  //width: 1em;
+  /* height: 1em;
+   line-height: 1;*/
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+md-sidenav, md-backdrop {
+  overflow: inherit !important;
 }

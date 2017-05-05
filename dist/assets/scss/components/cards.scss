@@ -1,10 +1,10 @@
 .card{
-  background-color: $color-white;
-  color: get-text-color($color-white);
+  //background-color: $color-white;
+  //color: get-text-color($color-white);
 
   &.bg-blue{
-    background-color: $color-deeper-blue;
-    color: get-text-color($color-deeper-blue);
+    //background-color: $color-deeper-blue;
+    //color: get-text-color($color-deeper-blue);
   }
 
   &.sponsor{
@@ -19,13 +19,13 @@
     }
 
     .title{
-      color: $color-light-black;
+      //color: $color-light-black;
       font-weight: $font-weight-bold;
       font-size: $font-size-normal;
     }
 
     .text{
-      color: $color-lighter-black;
+      //color: $color-lighter-black;
       font-size: $font-size-x-small;
     }
   }
@@ -54,7 +54,7 @@
 
 .grey-box{
 
-  background-color: $color-lighter-grey;
+  //background-color: $color-lighter-grey;
 
   .left-panel{
     height: auto;
@@ -63,18 +63,18 @@
       margin:10% 10% 5% 10%;
       padding-left:25px;
       padding-right:25px;
-      background-color:white;
+      //background-color:white;
     }
     .md-primary{
       padding: 2% 5% 2% 5%;
       width:80%;
-      background-color:$color-light-blue !important;
+      //background-color:$color-light-blue !important;
     }
   }
 
   .right-panel{
 
-    background-color:white;
+    //background-color:white;
 
     .md-icon-button{
       float:right;

@@ -45,14 +45,19 @@
 
             $scope.setdate = function(newdate) {
                 $scope.currentDate = newdate;
-                //$scope.increment();
             };
             $scope.IsMonth=true;
             $scope.currentDate= new Date();
-            $scope.year = $scope.currentDate.getFullYear();
-            $scope.month = $scope.currentDate.toLocaleString("en-us", { month: "long" });
 
-
+            $scope.show = function(size){
+                if($mdMedia(size))
+                {
+                    $scope.IsDay=true;
+                    $scope.IsMonth=false;
+                    $scope.IsWeek=false;
+                }
+                return $mdMedia(size);
+            };
 
             $scope.weeks = [
                 {
@@ -141,6 +146,7 @@
                 }
             ]
 
+
             $scope.calView=function(id){
                 $scope.IsMonth=false;
                 $scope.IsWeek=false;
@@ -177,25 +183,13 @@
                 return item;
             };
 
-            //$scope.setDate=function(counter)
-            //{
-            //    var newDate = new Date(+$scope.currentDate);
-            //    //newDate.setDate(newDate.getDate() + 1);
-            //    //$scope.currentDate = newDate;
-            //
-            //    //$scope.currentDate= new Date($scope.expirationdate);
-            //    if($scope.IsMonth)
-            //        newDate.setDate(newDate.getDate() + 1);
-            //    else if($scope.IsWeek)
-            //        newDate.setDate(newDate.getDate() + 1);
-            //    else
-            //        newDate.setDate(newDate.getDate() + 1);
-            //
-            //    $scope.currentDate = newDate;
-            //    $scope.year = $scope.currentDate.getFullYear();
-            //    $scope.month =$scope.currentDate.toLocaleString("en-us", { month: "long" });
-            //    $scope.dayNumber =$scope.currentDate.getDate();
-            //};
+            $scope.getDate=function(){
+                var item ={}
+                item.monthyear=$scope.currentDate.toLocaleString("en-us", { month: "long"})+" "+
+                $scope.currentDate.getFullYear();
+                return item;
+            };
+
 
             $scope.getDateForWeek=function(counter)
             {

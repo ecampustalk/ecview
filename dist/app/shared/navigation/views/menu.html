@@ -1,13 +1,14 @@
-<md-card class="dashboard-menu" style="max-width: 250px;" flex-wrap>
+<md-card class="dashboard-menu"  md-whiteframe="{{height}}" ng-mouseenter="height = 6" ng-mouseleave="height = 3"
+         style="max-width: 250px;" flex-wrap>
 
     <md-button ng-href="{{card.link}}" class="md-button md-primary" ng-disabled style="height: 100%;
-        background-color:#00b3e2; width: 100%;min-height: 100px; margin:0px;padding: 0px;" aria-label="{{card.title}}">
+        width: 100%;min-height: 100px; margin:0px;padding: 0px;" aria-label="{{card.title}}">
         <div style="padding: 20px;" layout="row" layout-align="space between">
             <i class="{{card.icon}}" style="color: rgba(224, 224, 224, 0.53);
     font-size: 60px;" ></i>
             <div layout="column" layout-align="start end">
-                <label ng-hide="{{card.count ===0}}" style="font-family: 'roboto light'; color:white;font-weight: 100; font-size: xx-large;">{{card.count}}</label>
-                <label style="color:white;font-weight: 100;margin-top: 10px; font-size: small;">{{card.title}}</label>
+                <label ng-hide="{{card.count ===0}}" style="font-weight: 100; font-size: xx-large;">{{card.count}}</label>
+                <label style="font-weight: 100;margin-top: 10px; font-size: small;">{{card.title}}</label>
             </div>
         </div>
     </md-button>

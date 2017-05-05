@@ -1,10 +1,10 @@
 //right navigation menu colors, font weights, padding etc.
 .md-sidenav-right{
   background-color: $color-black;
-  color: $color-lighter-grey;
+  //color: $color-lighter-grey;
 
   .icon{
-    color: $color-lighter-grey;
+    //color: $color-lighter-grey;
   }
   .list-item{
 
@@ -18,18 +18,18 @@
     }
     .list-item-body{
       font-size: x-small;
-      color: $color-deeper-grey;
+      //color: $color-deeper-grey;
     }
 
   }
 
   .divider{
-    border-color:$color-deeper-grey;
+    //border-color:$color-deeper-grey;
     margin:5%;
   }
 }
 
 .nav-right{
   background-color: $color-black;
-  color: $color-lighter-grey;
+  //color: $color-lighter-grey;
 }

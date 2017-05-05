@@ -1,15 +1,52 @@
-<md-sidenav flex class="md-sidenav-left md-whiteframe-z2 left-nav"
+<md-sidenav flex class="md-sidenav-left left-nav"
             md-is-locked-open="$mdMedia('gt-md')" md-component-id="left"
-        style="max-width: 240px;">
+        style="min-width: 240px;max-width: 240px;" md-colors="::{backgroundColor: 'default-primary-700'}">
+    <md-toolbar class="md-toolbar-tools toolbar">
+        <md-button class="md-primary">Click me</md-button>
+    </md-toolbar>
     <md-content class="left-nav nav-left-menu" layout-padding>
 
+        <md-list>
+            <div ng-repeat="group in groups">
+                <md-list-item class="item-stable"
+                          ng-click="toggleGroup(group)"
+                          ng-class="{active: isGroupShown(group)}">
+                    <!--<i class="icon" ng-class="isGroupShown(group) ? 'ion-minus' : 'ion-plus'"></i>-->
+                    <i ng-if="isGroupShown(group)" class="material-icons">arrow_drop_up</i>
+                    <i ng-if="!isGroupShown(group)" class="material-icons">arrow_drop_down</i>
+                    <div class="md-list-item-text" layout="column">
+                        <p>{{ group.name }}</p>
+                        <p class="md-secondary">
+
+                        </p>
+                        <!--<md-checkbox class="md-secondary" ng-model="topping.wanted"></md-checkbox>-->
+                    </div>
+                </md-list-item>
+                <md-list-item ng-repeat="item in group.items" ng-show="isGroupShown(group)">
+                    {{item}}
+                </md-list-item>
+            </div>
+        </md-list>
 
         <md-list>
+            <md-subheader  class="md-no-sticky">Admin</md-subheader>
 
-            <md-list-item style="
-            margin: -16px -16px 32px -16px;padding: 0px;height: 64px;">
-                <img src="assets/images/logo.png" alt="user" />
+
+
+            <md-list-item class="md-1-line" ng-repeat="item in admin_menu" ng-click="null">
+                <!--<img ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />-->
+                <i style="font-size: x-large;padding-right: 10px;;"  class={{item.icon}}></i>
+                <div class="md-list-item-text" layout="column">
+                    <h4>{{ item.title }}</h4>
+                    <h4 class="md-secondary">{{ item.count }}</h4>
+                    <!--<md-checkbox class="md-secondary" ng-model="topping.wanted"></md-checkbox>-->
+                </div>
             </md-list-item>
+            <!--<md-list-item style="-->
+            <!--margin: -16px -16px 32px -16px;padding: 0px;height: 64px;">-->
+                <!--<img src="assets/images/logo.png" alt="user" />-->
+            <!--</md-list-item>-->
+            <md-divider></md-divider>
 
             <md-list-item style="
             /*background-color: #bce8f1;*/
@@ -35,15 +72,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d0e4f7', end
                 </div>
             </md-list-item>
 
-            <md-list-item style="margin:-16px;" ng-repeat="item in left_menu" ng-href="{{item.link}}">
-                <i style="font-size: x-large;" class={{item.icon}}></i>
-                <!--<md-button class="md-button" style="text-decoration: none;" ng-href="{{item.link}}" >-->
-                    <!--{{item.title}}-->
-                <!--</md-button>-->
-                <p style="margin: 0px 10px;">{{item.title}}</p>
-                <span flex></span>
-                <label ng-hide="{{item.count ===0}}">{{item.count}}</label>
-            </md-list-item>
         </md-list>
     </md-content>
 </md-sidenav>

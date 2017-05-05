@@ -1,6 +1,6 @@
 .md-toolbar-tools{
-  background-color: $color-deep-black;
-  color: $color-lighter-grey;
+  //background-color: $color-deep-black;
+  //color: $color-lighter-grey;
 
   .ion-navicon-round{
     font-size: $font-size-large;
@@ -8,7 +8,7 @@
 
   .md-input-focused{
     md-icon{
-      color: $color-lighter-grey !important;
+      //color: $color-lighter-grey !important;
     }
   }
 
@@ -18,8 +18,8 @@
 
     .md-input{
       line-height: normal;
-      background-color: transparent;
-      color: $color-lighter-grey;
+      //background-color: transparent;
+      //color: $color-lighter-grey;
       border: none;
       width: 60%;
       font-size: $font-size-small;

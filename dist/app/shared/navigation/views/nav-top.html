@@ -1,8 +1,8 @@
 <md-toolbar>
-
+<md-truncate>
     <!--      This menu will be shown by default and will hide on search button click-->
 
-    <div class="md-toolbar-tools toolbar" ng-hide="showSearchBarDiv">
+    <md-toolbar class="md-toolbar-tools toolbar" ng-hide="showSearchBarDiv">
 
 
         <!--<img class="logo" src="assets/images/logo.jpg">-->
@@ -32,12 +32,11 @@
         </md-button>
 
         <div layout="row" ng-repeat="breadcrumb in breadcrumbs">
-
-            <md-button class="md-primary" ng-disabled="$last" ng-href="#{{breadcrumb.path}}">
+            <md-button ng-href="#{{breadcrumb.path}}">
                 <md-tooltip>{{breadcrumb.name}}</md-tooltip>
                 {{breadcrumb.name}}
             </md-button>
-            <label ng-hide="$last">/</label>
+            <label style="font-size: medium;padding-top:8px;" ng-if="!$last" >/</label>
         </div>
 
 
@@ -60,8 +59,8 @@
             LOG OUT
         </md-button>        
 
-    </div>
+    </md-toolbar>
 
-
+</md-truncate>
 
 </md-toolbar>

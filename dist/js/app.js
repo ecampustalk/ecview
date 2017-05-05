@@ -170,14 +170,19 @@
 
             $scope.setdate = function(newdate) {
                 $scope.currentDate = newdate;
-                //$scope.increment();
             };
             $scope.IsMonth=true;
             $scope.currentDate= new Date();
-            $scope.year = $scope.currentDate.getFullYear();
-            $scope.month = $scope.currentDate.toLocaleString("en-us", { month: "long" });
 
-
+            $scope.show = function(size){
+                if($mdMedia(size))
+                {
+                    $scope.IsDay=true;
+                    $scope.IsMonth=false;
+                    $scope.IsWeek=false;
+                }
+                return $mdMedia(size);
+            };
 
             $scope.weeks = [
                 {
@@ -266,6 +271,7 @@
                 }
             ]
 
+
             $scope.calView=function(id){
                 $scope.IsMonth=false;
                 $scope.IsWeek=false;
@@ -302,25 +308,13 @@
                 return item;
             };
 
-            //$scope.setDate=function(counter)
-            //{
-            //    var newDate = new Date(+$scope.currentDate);
-            //    //newDate.setDate(newDate.getDate() + 1);
-            //    //$scope.currentDate = newDate;
-            //
-            //    //$scope.currentDate= new Date($scope.expirationdate);
-            //    if($scope.IsMonth)
-            //        newDate.setDate(newDate.getDate() + 1);
-            //    else if($scope.IsWeek)
-            //        newDate.setDate(newDate.getDate() + 1);
-            //    else
-            //        newDate.setDate(newDate.getDate() + 1);
-            //
-            //    $scope.currentDate = newDate;
-            //    $scope.year = $scope.currentDate.getFullYear();
-            //    $scope.month =$scope.currentDate.toLocaleString("en-us", { month: "long" });
-            //    $scope.dayNumber =$scope.currentDate.getDate();
-            //};
+            $scope.getDate=function(){
+                var item ={}
+                item.monthyear=$scope.currentDate.toLocaleString("en-us", { month: "long"})+" "+
+                $scope.currentDate.getFullYear();
+                return item;
+            };
+
 
             $scope.getDateForWeek=function(counter)
             {
@@ -1696,6 +1690,35 @@ angular
 
 },{}],23:[function(require,module,exports){
 /**
+ * Created by Shrikant on 5/3/2017.
+ */
+angular
+    .module('app')
+    .directive('loading',   ['$http' ,function ($http)
+    {
+        return {
+            restrict: 'A',
+            template: '<md-progress-linear style="top:0px;left:0px;margin: 0px;padding:0% !important ;" ng-show="showloader" md-mode="indeterminate"></md-progress-linear>',
+            link: function (scope, elm, attrs)
+            {
+                scope.isLoading = function () {
+                    return $http.pendingRequests.length > 0;
+                };
+
+                scope.$watch(scope.isLoading, function (v)
+                {
+                    if(v){
+                        scope.showloader=true;
+                    }else{
+                        scope.showloader=false;
+                    }
+                });
+            }
+        };
+    }]);
+
+},{}],24:[function(require,module,exports){
+/**
  * Created by Shrikant on 5/12/2016.
  */
 
@@ -1712,7 +1735,7 @@ angular
 
     });
 
-},{}],24:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 /**
  * Created by Shrikant on 5/25/2016.
  */
@@ -1809,7 +1832,7 @@ angular
 
 }());
 
-},{}],25:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 /**
  * Created by Shrikant on 5/25/2016.
  */
@@ -1861,7 +1884,7 @@ angular
         return breadcrumbsService;
     }]);
 
-},{}],26:[function(require,module,exports){
+},{}],27:[function(require,module,exports){
 
 /**
  * Created by Shrikant on 5/2/2016.
@@ -2086,4 +2109,4 @@ angular
     }
 })();
 
-},{}]},{},[1,24,25,21,22,23,26,2,5,13,17,20,6,12,16,4,8,9,10,11,15,19,3,7,14,18]);
+},{}]},{},[1,25,26,21,22,23,24,27,2,5,13,17,20,6,12,16,4,8,9,10,11,15,19,3,7,14,18]);

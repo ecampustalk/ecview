@@ -8,19 +8,103 @@
     <!--<link rel="stylesheet" href="assets/vendors/angular/css/angular-material.min.css">-->
     <!--<link rel="stylesheet" href="css/tmp.css">-->
 
+<style type="text/css">
+
+    body {
+        background-color: #eee;
+    }
+       .showbox {
+           position: absolute;
+           top: 0;
+           bottom: 0;
+           left: 0;
+           right: 0;
+        height: 100%;
+        width: 100%;
+       }
+       .loader {
+           position: relative;
+           margin: 0 auto;
+           height: 100%;
+           width: 100%;
+
+    }
+
+    .circular {
+        animation: rotate 2s linear infinite;
+        height: 20%;
+        transform-origin: center center;
+        width: 20%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+    .path {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+        animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+        stroke-linecap: round;
+    }
+
+    @keyframes rotate {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes dash {
+        0% {
+            stroke-dasharray: 1, 200;
+            stroke-dashoffset: 0;
+        }
+        50% {
+            stroke-dasharray: 89, 200;
+            stroke-dashoffset: -35px;
+        }
+        100% {
+            stroke-dasharray: 89, 200;
+            stroke-dashoffset: -124px;
+        }
+    }
+
+    @keyframes color {
+        100%,
+        0% {
+            stroke: #d62d20;
+        }
+        40% {
+            stroke: #0057e7;
+        }
+        66% {
+            stroke: #008744;
+        }
+        80%,
+        90% {
+            stroke: #ffa700;
+        }
+    }
+</style>
+
 </head>
 <body>
-<label ng-if="false">loading app.....</label>
+<div class="showbox" ng-if="false">
+    <div class="loader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10"/>
+        </svg>
+    </div>
+</div>
+<div style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:1000;" ng-show="showloader" data-loading> </div>
 
 <div ng-controller="nav.controller" layout="row" layout-fill flex>
-    <div layout="column" class="left-nav" ng-include="'app/shared/navigation/views/nav-left.html'"></div>
+    <div layout="column" md-theme="default" class="left-nav" ng-include="'app/shared/navigation/views/nav-left.html'"></div>
     <div layout="column" style="background-color:#EFEFEF; height: 100%;width: 100%;">
-        <div layout="row" style="height: 64px;min-height: 64px;" ng-include="'app/shared/navigation/views/nav-top.html'"></div>
-
-        <md-content style="background-color:#EFEFEF;width: 100%;height: 100%;"
-                    layout-align="start center" layout="column" class="content-page">
-
-
+        <div layout="row" style="" ng-include="'app/shared/navigation/views/nav-top.html'"></div>
+        <md-content style="background-color:#EFEFEF;width: 100%;height: 100%;margin-top: 16px;" layout="column" class="content-page">
             <div class="slide" ng-view></div>
         </md-content>
         <!--<div layout="column" ng-include="'app/layout/views/common/nav-right.html'"></div>-->
@@ -28,17 +112,19 @@
 </div>
 
 <link rel="stylesheet" href="assets/vendors/angular/css/angular-material.min.css">
-<link rel="stylesheet" href="assets/vendors/ionicons/css/ionicons.min.css">
-<link rel="stylesheet" href="assets/css/demo.css">
+<!--<link rel="stylesheet" href="assets/vendors/ionicons/css/ionicons.min.css">-->
+<link rel="stylesheet" href="assets/css/main.css">
 <!--<script src="assets/vendors/jquery/js/jquery-2.1.4.js"></script>-->
 <!--<script src="assets/vendors/bootstrap/js/bootstrap.js"></script>-->
+<!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons"-->
+      <!--rel="stylesheet">-->
 <script src="assets/vendors/angular/js/angular.min.js"></script>
 <script src="assets/vendors/angular/js/angular-route.js"></script>
 <script src="assets/vendors/angular/js/angular-animate.min.js"></script>
 <script src="assets/vendors/angular/js/angular-aria.min.js"></script>
 <script src="assets/vendors/angular/js/angular-material.min.js"></script>
 <script src="assets/vendors/angular/js/angular-cookies.js"></script>
-
+<!--<link rel="prefetch" src="/eLibrary/assets/vendors/angular/fonts/MaterialIcons-Regular.woff">-->
 <!--<script src="app/app.config.js"></script>-->
 <script src="dist/js/app.js"></script>
 
